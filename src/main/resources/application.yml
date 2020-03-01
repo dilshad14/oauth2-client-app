@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          myClient: 
+            clientId: 
+            clientSecret: Aqn5KFPIQG_vD2RuBy3p_faUeNnlQztMj85ftyl4
+            provider: Okta
+            authorizationGrantType: authorization_code
+            redirectUri: http://localhost:8080/callback
+            authorizationUri: https://dev-587447.okta.com/oauth2/default/v1/authorize
+            accessTokenUri: https://dev-587447.okta.com/oauth2/default/v1/token
+            scope:
+              - openid
+              - email
+              - profile
+        provider:
+          Okta:
+            issuerUri: https://dev-587447.okta.com/oauth2/default
